@@ -1,0 +1,33 @@
+<% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> Tidak dapat menyimpan:</h2>
+      <ul>
+        <% @car.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<!-- hidden field -->
+<div>
+  <input type="hidden" name="car[id]" value="<%= @car.id %>">
+</div>
+<div class="field">
+  <label>Nama</label><br>
+  <input type="text" name="car[name]" value="<%= @car.name %>">
+</div>
+<div class="field">
+  <label>Merek</label><br>
+  <input type="text" name="car[brand]" value="<%= @car.brand %>">
+</div>
+<div class="field">
+  <label>Keterangan</label><br>
+  <textarea name="car[description]"><%= @car.description %></textarea>
+</div>
+<div class="field">
+  <label>Harga</label><br>
+  <input type="number" name="car[price]" value="<%= @car.price %>">
+</div>
+<div class="actions">
+  <input type="submit" value="Simpan">
+</div>

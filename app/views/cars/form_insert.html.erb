@@ -1,0 +1,7 @@
+<h1>Tambah Data</h1>
+
+<%= link_to 'Kembali', '/cars' %>
+
+<%= form_for(@car, :url => '/cars/insert_data') do %>
+    <%= render partial: "form", locals: { car: @car } %>
+<% end %>

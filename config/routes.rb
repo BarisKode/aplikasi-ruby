@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   resources :articles, path: 'adm/articles'
+  get 'cars', to: 'cars#index'
+  get 'cars/form_insert', to: 'cars#form_insert'
+  post 'cars/insert_data', to: 'cars#insert_data'
+  get 'cars/form_update/:id', to: 'cars#form_update'
+  post 'cars/update_data', to: 'cars#update_data'
+  delete 'cars/hapus/:id', to: 'cars#hapus'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

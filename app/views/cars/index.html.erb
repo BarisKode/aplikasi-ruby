@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Daftar Mobil</h1>
+<br>
+<%= link_to 'Masukkan Data', '/cars/form_insert' %>
+<br>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Nama</th>
+    <th>Brand</th>
+    <th>Deskripsi</th>
+    <th>Harga</th>
+    <th colspan="3">Aksi</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.name %></td>
+        <td><%= car.brand %></td>
+        <td><%= car.description %></td>
+        <td><%= car.price %></td>
+        <td><%= link_to 'Edit', '/cars/form_update/' + car.id.to_s %></td>
+        <td><%= link_to 'Hapus', '/cars/hapus/' + car.id.to_s, method: :delete, data: { confirm: 'Apakah kamu yakin ingin menghapus data ini?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,7 @@
+<h1>Edit Data</h1>
+
+<%= link_to 'Kembali', '/cars' %>
+
+<%= form_for(@car, url: '/cars/update_data') do %>
+    <%= render partial: "form", locals: { car: @car } %>
+<% end %>

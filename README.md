@@ -1,6 +1,8 @@
 # Belajar Membuat Aplikasi sederhana Ruby On Rails
 
-Repository ini saya gunakan untuk pembelajaran bahasa pemrograman ruby on rails
+Repository ini saya gunakan untuk pembelajaran CRUD Dasar 
+dengan bahasa pemrograman ruby on rails
 
 By Rohmat Sasmito
-rochmad.26@gmail.com
+
+rohmadsasmito@gmail.com
